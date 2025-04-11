@@ -52,4 +52,9 @@ function dragElement(element)
       document.onmouseup = null;
       document.onmousemove = null;
     }
+
+  function openWindow(element)
+    {
+      element.style.display = "flex"
+    }
 }
