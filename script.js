@@ -7,3 +7,12 @@ function updateTime()
 }
 
 setInterval(updateTime, 1000);
+
+dragElement(document.getElementBy("mydiv"));
+function dragElement(element)
+{
+  var initialX = 0;
+  var initialY = 0;
+  var currentX = 0;
+  var currentY = 0;
+}
