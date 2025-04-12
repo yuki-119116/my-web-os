@@ -11,6 +11,9 @@ function dragElement(element)
   var welcomeScreenOpen = document.querySelector("#welcomeopen");
   const header = document.getElementById(element.id + "header");
 
+  const fixedWidth = welcomeScreen.offsetWidth;
+  const fixedHeight = welcomeScreen.offsetHeight;
+
   if (header)
   {
     document.getElementById(element.id + "header").onmousedown = dragMouseDown;
