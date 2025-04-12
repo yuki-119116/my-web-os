@@ -89,7 +89,7 @@ var timeText = document.querySelector("#timeElement");
 setInterval(updateTime, 1000);
 
 
-
+let selectedIcon;
 function selectIcon(element)
 {
   element.classList.add("selected");
@@ -107,7 +107,7 @@ function handleIconTap(element)
   if (element.classList.contains("selected"))
   {
     deselectIcon(element)
-    openWindow(window)
+    openWindow(document.getElementById("mydiv"));
   }
   else
   {
