@@ -92,28 +92,25 @@ setInterval(updateTime, 1000);
 
 
 
-var selectedIcon = undefined;
-function selectIcon(element)
-{
-  element.classList.add("selected");
-  selectedIcon = element
-}
+function handleIconTap(element) {
+  const appWindow = document.getElementById("notes");
 
-function deselectIcon(element)
-{
-  element.classList.remove("selected");
-  selectedIcon = undefined
-}
-
-function handleIconTap(element)
-{
-  if (element.classList.contains("selected"))
-  {
-    deselectIcon(element)
-    openWindow(window)
-  }
-  else
-  {
-    selectIcon(element)
+  if (element.classList.contains("selected")) {
+    deselectIcon(element);
+    openWindow(appWindow);
+  } else {
+    selectIcon(element);
   }
 }
+
+function openWindow(element) {
+  element.style.display = "flex";
+}
+
+function closeWindow(element) {
+  element.style.display = "none";
+}
+
+document.getElementById("notesclose").addEventListener("click", () => {
+  closeWindow(document.getElementById("notes"));
+});
