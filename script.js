@@ -1,5 +1,5 @@
 dragElement(document.getElementById("mydiv"));
-dragElement(document.getElementById("notes"));
+
 
 function dragElement(element)
 {
@@ -88,32 +88,3 @@ var timeText = document.querySelector("#timeElement");
  }
 }
 setInterval(updateTime, 1000);
-
-
-
-document.getElementById("welcomeclose").addEventListner("click", function()
-  {
-    closeWindow(document.getElementById("mydiv"));
-  });
-
-document.getElementById("notesclose").addEventListner("click", function()
-  {
-    closeWindow(document.getElementById("notes"));
-  });
-
-let selectedIcon;
-
-fucntion handleIconTap(iconElement)
-{
-  const appWindow = document.getElementById("notes");
-
-  if (iconElement.classList.contains("selected"))
-  {
-    deselectIcon(iconElement);
-    openWindow(appWindow);
-  }
-  else
-  {
-    selection(iconElement);
-  }
-}
