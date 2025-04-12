@@ -114,3 +114,13 @@ function handleIconTap(element)
     selectIcon(element)
   }
 }
+
+function openWindow(element)
+{
+  element.style.display = "flex";
+}
+
+function closeWindow(element)
+{
+  element.style.display = "none";
+}
