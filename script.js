@@ -6,7 +6,9 @@ function dragElement(element)
   var initialY = 0;
   var currentX = 0;
   var currentY = 0;
-  var welcomeScreen = document.querySelector("#welcome")
+  var welcomeScreen = document.querySelector("#welcome");
+  var welcomeScreenClose = document.querySelector("#welcomeclose");
+  var welcomeScreenOpen = document.querySelector("#welcomeopen");
 
   if (document.getElementById(element.id + "header"))
   {
@@ -54,4 +56,15 @@ function dragElement(e)
     {
       element.style.display = "flex"
     }
+
+  welcomeScreenClose.addEventListener("click", function()
+    {
+      closeWindow(welcomeScreen);
+    });
+
+   welcomeScreenOpen.addEventListener("click", function()
+    {
+      openWindow(welcomeScreen);
+    });
+  
 }
