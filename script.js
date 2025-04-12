@@ -29,7 +29,7 @@ function dragElement(element)
       document.onmousemove = dragElement;
     }
   
-function dragElement(e)
+function elementDrag(e)
     {
       e = e || window.event;
       e.preventDefault();
