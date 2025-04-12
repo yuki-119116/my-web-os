@@ -9,23 +9,24 @@ function dragElement(element)
   var welcomeScreen = document.querySelector("#welcome");
   var welcomeScreenClose = document.querySelector("#welcomeclose");
   var welcomeScreenOpen = document.querySelector("#welcomeopen");
+  const header = document.getElementById(element.id + "header");
 
-  if (document.getElementById(element.id + "header"))
+  if (header)
   {
     document.getElementById(element.id + "header").onmousedown = dragMouseDown;
   }
   else
   {
-    element.onmousedown = startDragging;
+    element.onmousedown = dragMouseDown;
   }
 
-  function startDragging(e)
+  function dragMouseDown(e)
     {
       e = e || window.event;
       e.preventDefault();
       initialX = e.clientX;
       initialY = e.clientY;
-      document.onmouseup = stopDragging;
+      document.onmouseup = closeDragElement;
       document.onmousemove = elementDrag;
     }
   
@@ -41,7 +42,7 @@ function elementDrag(e)
       element.style.left = (element.offsetLeft - currentX) + "px";
     }
 
-  function stopDragging() 
+  function closeDragElement() 
    {
   document.onmouseup = null;
   document.onmousemove = null;
