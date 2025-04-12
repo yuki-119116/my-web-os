@@ -90,43 +90,30 @@ var timeText = document.querySelector("#timeElement");
 setInterval(updateTime, 1000);
 
 
+
+document.getElementById("welcomeclose").addEventListner("click", function()
+  {
+    closeWindow(document.getElementById("mydiv"));
+  });
+
+document.getElementById("notesclose").addEventListner("click", function()
+  {
+    closeWindow(document.getElementById("notes"));
+  });
+
 let selectedIcon;
 
-function handleIconTap(iconElement)
+fucntion handleIconTap(iconElement)
 {
   const appWindow = document.getElementById("notes");
 
-  const isSelected = iconElement.classList.contains("selected");
-
-  if (selectedIcon && selectedIcon !== iconElement) 
-  {
-    deselectIcon(selectedIcon);
-  }
-  if (isSelected)
+  if (iconElement.classList.contains("selected"))
   {
     deselectIcon(iconElement);
     openWindow(appWindow);
-  } else 
+  }
+  else
   {
-    selectIcon(iconElement);
+    selection(iconElement);
   }
 }
-
-function selectIcon(element) {
-  element.classList.add("selected");
-  selectedIcon = element;
-}
-
-function deselectIcon(element) {
-  element.classList.remove("selected");
-  selectedIcon = undefined;
-}
-
-function openWindow(element) {
-  element.style.display = "flex";
-}
-
-function closeWindow(element) {
-  element.style.display = "none";
-}
-
