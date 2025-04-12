@@ -6,14 +6,15 @@ function dragElement(element)
   var initialY = 0;
   var currentX = 0;
   var currentY = 0;
+  var welcomeScreen = document.querySelector("#welcome")
 
   if (document.getElementById(element.id + "header"))
   {
-    document.getElementById(element.id + "header").onmousedown = startDragging;
+    document.getElementById(element.id + "header").onmousedown = dragMouseDown;
   }
   else
   {
-    element.onmousedown = startDragging;
+    element.onmousedown = dragMouseDown;
   }
 
   function startDragging(e)
@@ -43,4 +44,14 @@ function dragElement(e)
   document.onmouseup = null;
   document.onmousemove = null;
    }  
+
+  function closeWindow(element)
+    {
+      element.style.display = "none"
+    }
+  
+  function openWindow(element)
+    {
+      element.style.display = "flex"
+    }
 }
