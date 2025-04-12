@@ -16,7 +16,7 @@ function dragElement(element)
   }
   else
   {
-    element.onmousedown = dragMouseDown;
+    element.onmousedown = startDragging;
   }
 
   function startDragging(e)
@@ -26,7 +26,7 @@ function dragElement(element)
       initialX = e.clientX;
       initialY = e.clientY;
       document.onmouseup = stopDragging;
-      document.onmousemove = dragElement;
+      document.onmousemove = elementDrag;
     }
   
 function elementDrag(e)
