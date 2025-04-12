@@ -76,9 +76,10 @@ function elementDrag(e)
 function updateTime()
 {
 var currentTime = new Date().toLocaleString();
-var timeText = 
-document.querySelector("#timeElement");
-  timeText.innerHTML = currentTime;
+var timeText = document.querySelector("#timeElement");
+ if (timeText)
+ {
+   timeText.innerHTML = currentTime;
+ }
 }
-
 setInterval(updateTime, 1000);
