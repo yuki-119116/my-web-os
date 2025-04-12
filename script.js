@@ -6,7 +6,7 @@ function dragElement(element)
   var initialY = 0;
   var currentX = 0;
   var currentY = 0;
-  var welcomeScreen = document.querySelector("#welcome");
+  var welcomeScreen = document.querySelector("#mydiv");
   var welcomeScreenClose = document.querySelector("#welcomeclose");
   var welcomeScreenOpen = document.querySelector("#welcomeopen");
   const header = document.getElementById(element.id + "header");
