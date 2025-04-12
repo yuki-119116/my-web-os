@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html>
+
+      <head>
+           <style>
+                .selected
+                {
+                    outline: 2px solid #00ffcc;
+                    transform: scale(1.05);
+                    transition: all 0.2s ease;
+                }
+            </style>
+      </head>
     
   <body  
     style="font-family: Noto Sans, sans-serif; height: 100vh; 
@@ -67,18 +78,12 @@ width: fit-content; position: absolute;
       
     </div>
 
+      
       <div id="desktopApps" style="padding-top: 64px;">
-          <div onlick="handleIconTap(this)"
+          <div onclick="handleIconTap(this)"
               style="text-align: center; padding: 16px;
               filter: drop-shadow(0 0 12px black); width: fit-content; cursor: pointer;">
-            <style>
-                .selected
-                {
-                    outline: 2px solid #00ffcc;
-                    transform: scale(1.05);
-                    transition: all 0.2s ease;
-                }
-            </style>
+        
               <img src="https://cdn.glitch.global/23d65103-eae3-451b-9edd-7a7fbaaf1f01/Screen%20Shot%202025-04-11%20at%2010.51.38%20PM.png?v=1744472152825"
                   style="width: 64px; height: 64px; border-radius: 16px;">
               
