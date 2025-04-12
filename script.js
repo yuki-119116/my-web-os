@@ -81,5 +81,9 @@ var timeText = document.querySelector("#timeElement");
  {
    timeText.innerHTML = currentTime;
  }
+  else
+ {
+   console.log("⚠️ timeElement not found in the DOM.");
+ }
 }
 setInterval(updateTime, 1000);
