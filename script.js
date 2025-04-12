@@ -1,4 +1,5 @@
 dragElement(document.getElementById("mydiv"));
+dragElement(document.getElementById("notes"));
 
 function dragElement(element)
 {
@@ -90,37 +91,42 @@ setInterval(updateTime, 1000);
 
 
 let selectedIcon;
-function selectIcon(element)
+
+function handleIconTap(iconElement)
 {
+  const appWindow = document.getElementById("notes");
+
+  const isSelected = iconElement.classList.contains("selected");
+
+  if (selectedIcon && selectedIcon !== iconElement) 
+  {
+    deselectIcon(selectedIcon);
+  }
+  if (isSelected)
+  {
+    deselectIcon(iconElement);
+    openWindow(appWindow);
+  } else 
+  {
+    selectIcon(iconElement);
+  }
+}
+
+function selectIcon(element) {
   element.classList.add("selected");
   selectedIcon = element;
 }
 
-function deselectIcon(element)
-{
+function deselectIcon(element) {
   element.classList.remove("selected");
   selectedIcon = undefined;
 }
 
-function handleIconTap(element)
-{
-  if (element.classList.contains("selected"))
-  {
-    deselectIcon(element)
-    openWindow(document.getElementById("mydiv"));
-  }
-  else
-  {
-    selectIcon(element)
-  }
-}
-
-function openWindow(element)
-{
+function openWindow(element) {
   element.style.display = "flex";
 }
 
-function closeWindow(element)
-{
+function closeWindow(element) {
   element.style.display = "none";
 }
+
