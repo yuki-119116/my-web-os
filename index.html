@@ -84,22 +84,36 @@ width: fit-content; position: absolute;
           </div>
       </div>
 
-<div class="window" id="notes" style="display:
-  top: calc(50% - 240px); left: calc(50% - 260px); ">
-      <div class="windowheader" id="notesheader">
-        <div class="closebutton" id="notesclose">
+<div class="window" id="notes" style="display:none; position: absolute;
+  top: calc(50% - 240px); left: calc(50% - 260px); fixed-direction: column; z-index: 10; ">
+  
+      <div class="windowheader" id="notesheader"
+        style="background: #eee; padding: 12px; align-items: center; 
+        justify-content: space-between-space;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;">
+        
+        <div class="closebutton" id="notesclose"
+          style="width: 16px; height: 16px; background-color: #EC6B5E;
+          border-radius: 50%; cursor: pointer; border: 1px solid rgba(0, 0, 0, 0.25);">
     </div>
 
-        <p class="headertext">Upcoming Events</p>
-        <div style="width: 16px; margin-right: 6px; height: 16px;"></div>
+        <p class="headertext" style="margin: 0; font-weight: bold; font-family: 'Poppins', sans-serif;">
+          Upcoming Events
+        </p>
+        
+        <div style="width: 16px; height: 16px;"></div>
 </div>
 
+
+  
   <div 
-    style="background-color: #fff; margin: 6px; border-radius: 12px; width: 520px;
+    style="background-color: #fff; margin: 0px; border-radius: 12px; width: 520px;
     height: 480px; padding: 16px; font-family: monospace; display: flex; ">
+    
    <div style="background-color: #F9F9F9; width: 520px; margin-right: 16px;
-     paddiing: 16px; border-radius: 16px;">
-    <p style="margin:0 px;">💭 To-Do & Thoughts 📋 </p>
+     paddiing: 16px; border-radius: 12px;">
+    <p style="margin: 0px;">💭 To-Do & Thoughts 📋 </p>
     <p style="font-size: 12px; margin: 0px;">04/16/2025</p>
    </div>
 
@@ -113,10 +127,12 @@ width: fit-content; position: absolute;
           </br>
           </br>
           This is a place where we store our thoughts as they come to mind.
-          💡 Future Workshops 🛠️
-          🚌 Future Fieldtrips 📸
-          🥳 Summerfest 🔥
-          <ins>💃 Dance Party 🕺</ins>
+          </br>
+          </br>
+          💡 Future Workshops 🛠️</br>
+          🚌 Future Fieldtrips 📸</br>
+          🥳 Summerfest 🔥</br>
+          💃 Dance Party 🕺</br>
         </span>
       </p>
     </div>
