@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const welcomeScreen = document.getElementById("mydiv");
   if (welcomeScreen) dragElement(welcomeScreen);
 
+ 
 const menuItems = document.querySelectorAll("#notesMenu .menu-item");
 const contentSections = document.querySelectorAll(".notes-content-section");
 
