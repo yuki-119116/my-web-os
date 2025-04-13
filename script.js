@@ -1,13 +1,3 @@
- function closeWindow(element)
-    {
-      element.style.display = "none";
-    }
-  
-  function openWindow(element)
-    {
-      element.style.display = "flex";
-    }
-
 document.addEventListener("DOMContentLoaded", function () {
   const notesClose = document.getElementById("notesclose");
   const notesWindow = document.getElementById("notes");
@@ -26,32 +16,48 @@ document.addEventListener("DOMContentLoaded", function () {
   const welcomeScreen = document.getElementById("mydiv");
   if (welcomeScreen) dragElement(welcomeScreen);
 
- 
-const menuItems = document.querySelectorAll("#notesMenu .menu-item");
-const contentSections = document.querySelectorAll(".notes-content-section");
 
- menuItems.forEach(item => 
+const notesMenu = document.getElementById("notesMenu");
+  if (notesMenu) 
   {
-    item.addEventListener("click", function ()
+    notesMenu.addEventListener("click", function (e) 
+   {
+     if (e.target && e.target.classList.contains("menu-item")) 
      {
-      const targetId = this.getAttribute("data-target");
+        const targetId = e.target.getAttribute("data-target");
+      
+       document.querySelectorAll(".menu-item").forEach(item => 
+        {
+          item.classList.remove("selected");
+        });
+        e.target.classList.add("selected");
 
-     menuItems.forEach(i => i.classList.remove("selected"));
-      this.classList.add("selected");
-
-     contentSections.forEach(section => 
-      {
-        section.style.display = "none";
-      });
-
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) 
-      {
-        targetSection.style.display = "block";
+         document.querySelectorAll(".notes-content-section").forEach(section => 
+        {
+          section.style.display = "none";
+        });
+      
+       const targetSection = document.getElementById(targetId);
+        if (targetSection) 
+        {
+          targetSection.style.display = "block";
+        }
       }
     });
-  });
+  }
 });
+
+ function closeWindow(element)
+    {
+      element.style.display = "none";
+    }
+  
+  function openWindow(element)
+    {
+      element.style.display = "flex";
+    }
+
+    
 
 function dragElement(element)
 {
