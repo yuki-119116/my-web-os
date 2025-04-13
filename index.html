@@ -81,47 +81,44 @@ width: fit-content; position: absolute;
           </div>
 </div>
 
-
 <div id="notes" class="window" 
-  style="top: calc(50% - 240px); left: calc(50% - 260px);
-  display: none;">
-  
-  <div class="windowheader" id="notesheader"
-    style="background-color: #ddd; border-radius: 12px 12px 0 0; padding: 8px 12px; 
-    display: flex; justify-content: space-between; align-items: center;">
-     <p class="headertext">Notes</p>
+     style="top: calc(50% - 240px); left: calc(50% - 260px); display: none; 
+     position: absolute; width: 520px; border-radius: 12px; overflow: hidden; 
+     background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+     display: flex; flex-direction: column;">
+
+<div class="windowheader" id="notesheader"
+    style="background-color: #ddd; padding: 8px 12px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: monospace; font-weight: bold;">
+    <p style="margin: 0;">Notes</p>
     <div id="notesclose" class="closebutton"
-      style="cursor: pointer; 
-      background-color: red; width: 16px; height: 16px; border-radius: 50%;"></div>
+      style="cursor: pointer; background-color: red; 
+      width: 16px; height: 16px; border-radius: 50%;"></div>
   </div>
 
-  <p class="headertext">Notes</p>
+  <div style="padding: 16px; font-family: monospace; 
+       height: 480px; overflow-y: auto;">
     
-<div style="background-color: #fff; margin: 0px; border-radius: 12px; 
-  max-width: 520px; width: 100%;
-  height: 480px; padding: 16px; font-family: monospace; display: flex; flex-direction: column;">
-    
-    <div style="background-color: #F9F9F9; width: 520px; margin-right: 16px;
-      padding: 16px; border-radius: 12px;">
+    <div style="background-color: #F9F9F9; padding: 16px; 
+        border-radius: 12px; margin-bottom: 16px;">
       <p style="margin: 0px;">💭 To-Do & Thoughts 📋 </p>
       <p style="font-size: 12px; margin: 0px;">04/16/2025</p>
     </div>
 
-    <div style="overflow-y: scroll;">
-      <p contenteditable="true">
-        <span contenteditable="true">
-          Welcome to <strong>STEMer's Notes</strong><br><br>
-          <img src="https://cdn.glitch.global/133fff04-a60a-4d86-9446-2ada908f14ff/Screen%20Shot%202025-04-12%20at%202.28.35%20PM.png?v=1744482556030"
-               style="width: 96px; border-radius: 16px" />
-          <br><br>
-          This is a place where we store our thoughts as they come to mind.<br><br>
-          💡 Future Workshops 🛠️<br>
-          🚌 Future Fieldtrips 📸<br>
-          🥳 Summerfest 🔥<br>
-          💃 Dance Party 🕺
-        </span>
-      </p>
-    </div>
+    <p contenteditable="true">
+      <span contenteditable="true">
+        Welcome to <strong>STEMer's Notes</strong><br><br>
+        <img src="https://cdn.glitch.global/133fff04-a60a-4d86-9446-2ada908f14ff/Screen%20Shot%202025-04-12%20at%202.28.35%20PM.png?v=1744482556030"
+             style="width: 96px; border-radius: 16px" />
+        <br><br>
+        This is a place where we store our thoughts as they come to mind.<br><br>
+        💡 Future Workshops 🛠️<br>
+        🚌 Future Fieldtrips 📸<br>
+        🥳 Summerfest 🔥<br>
+        💃 Dance Party 🕺
+      </span>
+    </p>
   </div>
 </div>
   
