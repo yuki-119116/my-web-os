@@ -1,5 +1,19 @@
+window.onload = function () 
+{
 dragElement(document.getElementById("mydiv"));
 dragElement(document.getElementById("notes"));
+
+const notesClose = document.getElementById("notesclose");
+const notesWindow = document.getElementById("notes");
+
+ if (notesClose && notesWindow)
+ {
+    notesClose.addEventListener("click", function () 
+    {
+      closeWindow(notesWindow);
+    });
+  }
+};
 
  function closeWindow(element)
     {
