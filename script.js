@@ -25,6 +25,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const welcomeScreen = document.getElementById("mydiv");
   if (welcomeScreen) dragElement(welcomeScreen);
+
+const menuItems = document.querySelectorAll("#notesMenu .menu-item");
+const contentSections = document.querySelectorAll(".notes-content-section");
+
+ menuItems.forEach(item => 
+  {
+    item.addEventListener("click", function ()
+     {
+      const targetId = this.getAttribute("data-target");
+
+     menuItems.forEach(i => i.classList.remove("selected"));
+      this.classList.add("selected");
+
+     contentSections.forEach(section => 
+      {
+        section.style.display = "none";
+      });
+
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) 
+      {
+        targetSection.style.display = "block";
+      }
+    });
+  });
 });
 
 function dragElement(element)
