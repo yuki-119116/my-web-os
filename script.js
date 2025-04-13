@@ -1,5 +1,5 @@
 dragElement(document.getElementById("mydiv"));
-
+dragElement(document.getElementById("notes"));
 function dragElement(element)
 {
   var initialX = 0;
@@ -107,7 +107,7 @@ function handleIconTap(element)
   if (element.classList.contains("selected"))
   {
     deselectIcon(element)
-    openWindow(document.getElementById("mydiv"));
+    openWindow(document.getElementById("notes"));
   }
   else
   {
