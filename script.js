@@ -1,3 +1,14 @@
+ function closeWindow(element)
+    {
+      element.style.display = "none";
+    }
+  
+  function openWindow(element)
+    {
+      element.style.display = "flex";
+    }
+
+
 window.onload = function () 
 {
 dragElement(document.getElementById("mydiv"));
@@ -15,15 +26,6 @@ const notesWindow = document.getElementById("notes");
   }
 };
 
- function closeWindow(element)
-    {
-      element.style.display = "none";
-    }
-  
-  function openWindow(element)
-    {
-      element.style.display = "flex";
-    }
 
 function dragElement(element)
 {
