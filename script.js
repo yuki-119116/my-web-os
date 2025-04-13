@@ -8,24 +8,24 @@
       element.style.display = "flex";
     }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const notesClose = document.getElementById("notesclose");
+  const notesWindow = document.getElementById("notes");
 
-window.onload = function () 
-{
-dragElement(document.getElementById("mydiv"));
-dragElement(document.getElementById("notes"));
+  console.log("notesClose:", notesClose);
+  console.log("notesWindow:", notesWindow);
 
-const notesClose = document.getElementById("notesclose");
-const notesWindow = document.getElementById("notes");
-
- if (notesClose && notesWindow)
- {
-    notesClose.addEventListener("click", function () 
-    {
+  if (notesClose && notesWindow) {
+    notesClose.addEventListener("click", function () {
       closeWindow(notesWindow);
     });
   }
-};
 
+  dragElement(notesWindow);
+
+  const welcomeScreen = document.getElementById("mydiv");
+  if (welcomeScreen) dragElement(welcomeScreen);
+});
 
 function dragElement(element)
 {
