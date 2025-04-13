@@ -51,28 +51,66 @@ function elementDrag(e)
   document.onmousemove = null;
    }  
 
-  function openWindow(element)
-    {
-      element.style.display = "flex"
-    }
-  
   function closeWindow(element)
     {
       element.style.display = "none"
     }
+  
+  function openWindow(element)
+    {
+      element.style.display = "flex"
+    }
 
-function updateTime() 
+  welcomeScreenClose.addEventListener("click", function()
+    {
+      closeWindow(welcomeScreen);
+    });
+
+   welcomeScreenOpen.addEventListener("click", function()
+    {
+      openWindow(welcomeScreen);
+    });
+  
+}
+
+function updateTime()
 {
-  var currentTime = new Date().toLocaleString();
-  var timeText = document.querySelector("#timeElement");
-  if (timeText) 
-  {
-    timeText.innerHTML = new Date().toLocaleString();
-  } 
-  else 
-  {
-    console.log("⚠️ timeElement not found in the DOM.");
-  }
+var currentTime = new Date().toLocaleString();
+var timeText = document.querySelector("#timeElement");
+ if (timeText)
+ {
+   timeText.innerHTML = currentTime;
+ }
+  else
+ {
+   console.log("⚠️ timeElement not found in the DOM.");
+ }
 }
 setInterval(updateTime, 1000);
 
+
+let selectedIcon;
+function selectIcon(element)
+{
+  element.classList.add("selected");
+  selectedIcon = element;
+}
+
+function deselectIcon(element)
+{
+  element.classList.remove("selected");
+  selectedIcon = undefined;
+}
+
+function handleIconTap(element)
+{
+  if (element.classList.contains("selected"))
+  {
+    deselectIcon(element)
+    openWindow(document.getElementById("mydiv"));
+  }
+  else
+  {
+    selectIcon(element)
+  }
+}
