@@ -85,7 +85,7 @@ width: fit-content; position: absolute;
      style="top: calc(50% - 240px); left: calc(50% - 260px); display: none; 
      position: absolute; width: 520px; border-radius: 12px; overflow: hidden; 
      background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
-     display: flex; flex-direction: column;">
+     flex-direction: column;">
 
 <div class="windowheader" id="notesheader"
     style="background-color: #ddd; padding: 8px 12px;
@@ -99,13 +99,15 @@ width: fit-content; position: absolute;
 
   <div style="padding: 16px; font-family: monospace; 
        height: 480px; overflow-y: auto;">
-    
-    <div style="background-color: #F9F9F9; width: 40%; padding: 16px; border-radius: 12px;">
+
+    <div style="display: flex; flex-direction: row; gap: 16px;">
+      
+    <div style="background-color: #F9F9F9; flex: 1; padding: 16px; border-radius: 12px;">
       <p style="margin: 0px;">💭 To-Do & Thoughts 📋 </p>
       <p style="font-size: 12px; margin: 0px;">04/16/2025</p>
     </div>
-
-    <div style="width: 60%;">
+  
+  <div style="flex: 2;">
     <p contenteditable="true">
       <span contenteditable="true">
         Welcome to <strong>STEMer's Notes</strong><br><br>
