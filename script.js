@@ -61,35 +61,6 @@ function elementDrag(e)
     {
       element.style.display = "none"
     }
-  
-let selectedIcon = null;
-
-function selectIcon(element)
-  {
-  element.classList.add("selected");
-  selectedIcon = element;
-  }
-
-function deselectIcon(element)
-  {
-  element.classList.remove("selected");
-  selectedIcon = null;
-  }
-
-  function handleIconTap(element)
-{
-  const appWindow = document.getElementById("notes");
-
-      if (element.classList.contains("selected")) 
- {
-    deselectIcon(element);
-    openWindow(appWindow);
-  } 
-     else 
-  {
-    selectIcon(element);
-  }
-}
 
 
 function updateTime() 
