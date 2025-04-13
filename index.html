@@ -83,9 +83,16 @@ width: fit-content; position: absolute;
 
 
 <div id="notes" class="window" 
-  style="top: calc(50% - 240px); left: calc(50% - 260px);">
-  <div class="windowheader" id="notesheader">
-    <div id="notesclose" class="closebutton">
+  style="top: calc(50% - 240px); left: calc(50% - 260px);
+  display: none;">
+  
+  <div class="windowheader" id="notesheader"
+    style="background-color: #ddd; border-radius: 12px 12px 0 0; padding: 8px 12px; 
+    display: flex; justify-content: space-between; align-items: center;">
+     <p class="headertext">Notes</p>
+    <div id="notesclose" class="closebutton"
+      style="cursor: pointer; 
+      background-color: red; width: 16px; height: 16px; border-radius: 50%;"></div>
   </div>
 
   <p class="headertext">Notes</p>
