@@ -1,5 +1,4 @@
 dragElement(document.getElementById("mydiv"));
-dragElement(document.getElementById("notes"));
 
 function dragElement(element)
 {
@@ -76,10 +75,3 @@ function updateTime()
 }
 setInterval(updateTime, 1000);
 
-document.getElementById("notesclose").addEventListener("click", () => {
-  closeWindow(document.getElementById("notes"));
-
-  document.querySelector("#desktopApps div").addEventListener("click", function () {
-  handleIconTap(this);
-});
-  
