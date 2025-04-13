@@ -61,14 +61,25 @@ function elementDrag(e)
       element.style.display = "none"
     }
 
+  welcomeScreenClose.addEventListener("click", function()
+    {
+      closeWindow(welcomeScreen);
+    });
+
+   welcomeScreenOpen.addEventListener("click", function()
+    {
+      openWindow(welcomeScreen);
+    });
 
 function updateTime() 
 {
-  const timeText = document.querySelector("#timeElement");
+ var currentTime = new Date().toLocaleString();
+  var timeText = document.querySelector("#timeElement");
   if (timeText) 
   {
     timeText.innerHTML = new Date().toLocaleString();
-  } else 
+  } 
+  else 
   {
     console.log("⚠️ timeElement not found in the DOM.");
   }
