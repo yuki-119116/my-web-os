@@ -124,13 +124,16 @@ function deselectIcon(element)
 
 function handleIconTap(element)
 {
+ const notes = document.getElementById("notes");
+ 
   if (element.classList.contains("selected"))
   {
     deselectIcon(element);
-    openWindow(document.getElementById("notes"));
+    closeWindow(notes);
   }
   else
   {
-    selectIcon(element)
+   selectIcon(element);
+   openWindow(notes);
   }
 }
