@@ -1,5 +1,5 @@
 dragElement(document.getElementById("mydiv"));
-
+dragElement(document.getElementById("notes"));
 
 function dragElement(element)
 {
@@ -52,63 +52,63 @@ function elementDrag(e)
   document.onmousemove = null;
    }  
 
+  function openWindow(element)
+    {
+      element.style.display = "flex"
+    }
+  
   function closeWindow(element)
     {
       element.style.display = "none"
     }
   
-  function openWindow(element)
-    {
-      element.style.display = "flex"
-    }
+let selectedIcon = null;
 
-  welcomeScreenClose.addEventListener("click", function()
-    {
-      closeWindow(welcomeScreen);
-    });
+function selectIcon(element)
+  {
+  element.classList.add("selected");
+  selectedIcon = element;
+  }
 
-   welcomeScreenOpen.addEventListener("click", function()
-    {
-      openWindow(welcomeScreen);
-    });
-  
-}
+function deselectIcon(element)
+  {
+  element.classList.remove("selected");
+  selectedIcon = null;
+  }
 
-function updateTime()
-{
-var currentTime = new Date().toLocaleString();
-var timeText = document.querySelector("#timeElement");
- if (timeText)
- {
-   timeText.innerHTML = currentTime;
- }
-  else
- {
-   console.log("⚠️ timeElement not found in the DOM.");
- }
-}
-setInterval(updateTime, 1000);
-
-
-
-
-
-
-
-
-
-dragElement(document.getElementById("notes"));
-
-function handleIconTap(element) 
+  function handleIconTap(element)
 {
   const appWindow = document.getElementById("notes");
 
-  if (element.classList.contains("selected")) 
-  {
+      if (element.classList.contains("selected")) 
+ {
     deselectIcon(element);
     openWindow(appWindow);
-  } else 
+  } 
+     else 
   {
     selectIcon(element);
   }
 }
+
+
+function updateTime() 
+{
+  const timeText = document.querySelector("#timeElement");
+  if (timeText) 
+  {
+    timeText.innerHTML = new Date().toLocaleString();
+  } else 
+  {
+    console.log("⚠️ timeElement not found in the DOM.");
+  }
+}
+setInterval(updateTime, 1000);
+
+document.getElementById("notesclose").addEventListener("click", () => {
+  closeWindow(document.getElementById("notes"));
+
+  document.querySelector("#desktopApps div").addEventListener("click", function () {
+  handleIconTap(this);
+});
+  
