@@ -3,12 +3,12 @@ dragElement(document.getElementById("notes"));
 
  function closeWindow(element)
     {
-      element.style.display = "none"
+      element.style.display = "none";
     }
   
   function openWindow(element)
     {
-      element.style.display = "flex"
+      element.style.display = "flex";
     }
 
 function dragElement(element)
@@ -62,6 +62,8 @@ function elementDrag(e)
   document.onmousemove = null;
    }  
 
+ if (element.id === "mydiv")
+ {
   welcomeScreenClose.addEventListener("click", function()
     {
       closeWindow(welcomeScreen);
@@ -71,6 +73,7 @@ function elementDrag(e)
     {
       openWindow(welcomeScreen);
     });
+ }
   
 }
 
@@ -107,7 +110,7 @@ function handleIconTap(element)
 {
   if (element.classList.contains("selected"))
   {
-    deselectIcon(element)
+    deselectIcon(element);
     openWindow(document.getElementById("notes"));
   }
   else
