@@ -103,14 +103,22 @@ width: fit-content; position: absolute;
 
     <div style="display: flex; flex-direction: row; gap: 16px;">
       
-    <div style="background-color: #F9F9F9; flex: 1; padding: 16px; border-radius: 12px;">
-      <p style="margin: 0px;">💭 To-Do & Thoughts 📋 </p>
-      <p style="font-size: 12px; margin: 0px;">04/16/2025</p>
-    </div>
+   <div id="notesMenu"
+       style="background-color: #F9F9F9; flex: 1; 
+       padding: 16px; border-radius: 12px; 
+       display: flex; flex-direction: column; gap: 8px;">
+    <div class="menu-item selected" data-target="todoSection" style="cursor: pointer;">💭 To-Do & Thoughts 📋<br>
+      <small>04/16/2025</small></div>
+    <div class="menu-item" data-target="membersSection" style="cursor: pointer;">📣💬 Exec Members</div>
+    <div class="menu-item" data-target="achievementsSection" style="cursor: pointer;">🎉 Achievements</div>
+  </div>
+
   
   <div style="flex: 2;">
+    
+    <div id="todoSection" class="notes-content-section">
     <p contenteditable="true">
-      <span contenteditable="true">
+      <span>
         Welcome to <strong>STEMer's Notes</strong><br><br>
         <img src="https://cdn.glitch.global/133fff04-a60a-4d86-9446-2ada908f14ff/Screen%20Shot%202025-04-12%20at%202.28.35%20PM.png?v=1744482556030"
              style="width: 96px; border-radius: 16px" />
@@ -122,6 +130,14 @@ width: fit-content; position: absolute;
         💃 Dance Party 🕺
       </span>
     </p>
+    </div>
+
+    <div id="membersSection" class="notes-content-section" style="display: none;">
+      <p> Meet the brilliant minds behind the club — the team that makes everything happen! 🌱</p>
+    </div>
+
+     <div id="achievementsSection" class="notes-content-section" style="display: none;">
+      <p> Here's what we've had achieved so far... 🔥</p>
     </div>
     
   </div>
