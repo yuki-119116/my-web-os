@@ -1,5 +1,16 @@
 dragElement(document.getElementById("mydiv"));
 dragElement(document.getElementById("notes"));
+
+ function closeWindow(element)
+    {
+      element.style.display = "none"
+    }
+  
+  function openWindow(element)
+    {
+      element.style.display = "flex"
+    }
+
 function dragElement(element)
 {
   var initialX = 0;
@@ -50,16 +61,6 @@ function elementDrag(e)
   document.onmouseup = null;
   document.onmousemove = null;
    }  
-
-  function closeWindow(element)
-    {
-      element.style.display = "none"
-    }
-  
-  function openWindow(element)
-    {
-      element.style.display = "flex"
-    }
 
   welcomeScreenClose.addEventListener("click", function()
     {
