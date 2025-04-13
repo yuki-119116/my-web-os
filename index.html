@@ -70,79 +70,57 @@ width: fit-content; position: absolute;
 
     
 
-    <div class="selected" styles="(styles)">
-      
-      <div id="desktopApps" style="padding-top: 64px;">
+   
+<div id="desktopApps">
           <div onclick="handleIconTap(this)"
-              style="text-align: center; padding: 16px;
-              filter: drop-shadow(0 0 12px black); width: fit-content; cursor: pointer;">
-        
+              style="cursor: pointer; text-align: center; padding: 16px;">
               <img src="https://cdn.glitch.global/23d65103-eae3-451b-9edd-7a7fbaaf1f01/Screen%20Shot%202025-04-11%20at%2010.51.38%20PM.png?v=1744472152825"
                   style="width: 64px; height: 64px; border-radius: 16px;">
-              
               <P style="margin: 0px; color: #fff; font-size: 16px; font-family: monospace; ">Upcoming Events</P>
           </div>
-      </div>
-
-<div id="notes" class="window"
-  style="display:none; position: absolute;
-  top: calc(50% - 240px); left: calc(50% - 260px); 
-  fixed-direction: column; z-index: 10;">
-  
-      <div class="windowheader" id="notesheader"
-        style="background: #eee; padding: 12px; align-items: center; 
-        justify-content: space-between-space;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;">
-        
-        <div class="closebutton" id="notesclose"
-          style="width: 16px; height: 16px; background-color: #EC6B5E;
-          border-radius: 50%; cursor: pointer; border: 1px solid rgba(0, 0, 0, 0.25);">
-    </div>
-
-        <p class="headertext" style="margin: 0; font-weight: bold; font-family: 'Poppins', sans-serif;">
-          Upcoming Events
-        </p>
-        
-        <div style="width: 16px; height: 16px;"></div>
 </div>
 
 
-  
-  <div 
-    style="background-color: #fff; margin: 0px; border-radius: 12px; width: 520px;
-    height: 480px; padding: 16px; font-family: monospace; display: flex; ">
-    
-   <div style="background-color: #F9F9F9; width: 520px; margin-right: 16px;
-     paddiing: 16px; border-radius: 12px;">
-    <p style="margin: 0px;">💭 To-Do & Thoughts 📋 </p>
-    <p style="font-size: 12px; margin: 0px;">04/16/2025</p>
-   </div>
+<div id="notes" class="window" style="display:none; position: absolute; top: 100px; left: 100px;">
+  <div class="windowheader" id="notesheader"
+    style="background: #eee; padding: 12px; display: flex; justify-content: space-between;
+              align-items: center; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+    <div id="notesclose" class="closebutton"
+      style="width: 16px; height: 16px; background-color: #EC6B5E;
+      border-radius: 50%; cursor: pointer; border: 1px solid rgba(0, 0, 0, 0.25);"></div>
+  </div>
+    <p class="headertext" style="margin: 0; font-weight: bold; font-family: 'Poppins', sans-serif;">
+      Upcoming Events
+    </p>
+    <div style="width: 16px; height: 16px;"></div>
 
-    <div style="overflow-y: scroll; ">
-      <p contenteditable="True">
-        <span contenteditable="true">Welcome to<strong>STEMer's Notes</strong>
-        </br>
-        </br>
-        <img src="https://cdn.glitch.global/133fff04-a60a-4d86-9446-2ada908f14ff/Screen%20Shot%202025-04-12%20at%202.28.35%20PM.png?v=1744482556030"
-          style="width: 96px; border-radius: 16px" />
-          </br>
-          </br>
-          This is a place where we store our thoughts as they come to mind.
-          </br>
-          </br>
-          💡 Future Workshops 🛠️</br>
-          🚌 Future Fieldtrips 📸</br>
-          🥳 Summerfest 🔥</br>
-          💃 Dance Party 🕺</br>
+<div style="background-color: #fff; margin: 0px; border-radius: 12px; width: 520px;
+      height: 480px; padding: 16px; font-family: monospace; display: flex;">
+    
+    <div style="background-color: #F9F9F9; width: 520px; margin-right: 16px;
+        padding: 16px; border-radius: 12px;">
+      <p style="margin: 0px;">💭 To-Do & Thoughts 📋 </p>
+      <p style="font-size: 12px; margin: 0px;">04/16/2025</p>
+    </div>
+
+    <div style="overflow-y: scroll;">
+      <p contenteditable="true">
+        <span contenteditable="true">
+          Welcome to <strong>STEMer's Notes</strong><br><br>
+          <img src="https://cdn.glitch.global/133fff04-a60a-4d86-9446-2ada908f14ff/Screen%20Shot%202025-04-12%20at%202.28.35%20PM.png?v=1744482556030"
+               style="width: 96px; border-radius: 16px" />
+          <br><br>
+          This is a place where we store our thoughts as they come to mind.<br><br>
+          💡 Future Workshops 🛠️<br>
+          🚌 Future Fieldtrips 📸<br>
+          🥳 Summerfest 🔥<br>
+          💃 Dance Party 🕺
         </span>
       </p>
     </div>
   </div>
 </div>
-        
-</div>
-    
+  
       <script src="script.js" defer></script>
       
    </body>
